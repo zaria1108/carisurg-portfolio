@@ -52,3 +52,37 @@ I cleaned the Fio2 (Fraction of Inspired Oxygen) column from a hospital emergenc
 - How to use `pd.to_numeric(..., errors='coerce')` to handle mixed-type columns
 - How to justify imputation method based on data distribution
 - How to add clinical meaning back to cleaned data through categorisation
+
+## Tutorial 3: Data Visualisation
+### What was done
+I created two clinical visualisations from the hospital triage dataset to explore patterns in patient demographics and haemodynamic status.
+
+### The Plots
+
+**Plot 1 — Patient Age Distribution (Histogram)**
+
+| Property | Detail |
+|---|---|
+| Clinical question | What age groups most frequently present to this ED? |
+| Plot type | Histogram — distribution of one continuous variable |
+| Reference lines | Paediatric threshold (18), Elderly threshold (65+) |
+
+**Plot 2 — Age vs Mean Arterial Pressure (Scatter Plot)**
+
+| Property | Detail |
+|---|---|
+| Clinical question | Does MAP increase with age in the ED? |
+| Plot type | Scatter — relationship between two continuous variables |
+| Reference lines | MAP < 60 (organ perfusion risk), MAP > 100 (hypertensive concern) |
+
+### My Solution
+1. Identified a clinical question before choosing each plot type
+2. Used `ax.hist()` for the age distribution and `ax.scatter()` for the Age vs MAP relationship
+3. Added `axvline()` and `axhline()` reference lines with clinical thresholds labelled
+4. Saved each figure with `plt.savefig()` at 100 dpi
+
+### What I Learned
+- How to frame a plot around a clinical question before writing any code
+- How to choose between a histogram and scatter plot based on variable types
+- How to add clinical reference lines to give statistical plots medical meaning
+- How to annotate and label plots clearly for a clinical audience
