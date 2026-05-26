@@ -86,3 +86,12 @@ I created two clinical visualisations from the hospital triage dataset to explor
 - How to choose between a histogram and scatter plot based on variable types
 - How to add clinical reference lines to give statistical plots medical meaning
 - How to annotate and label plots clearly for a clinical audience
+
+
+## Supporting Reports
+
+**At Risk Patient Logic** — Designed a pseudocode triage system that scores patients across seven vital signs (GCS, SBP, MAP, pulse, RR, temperature, FiO2) and assigns urgency levels from "Not urgent" to "Immediate intervention needed". I also outlined other important elements such as age weighting and vital sign trend tracking over the first 30 minutes post arrival.
+
+**Fraction of Inspired Oxygen Report** — Documented clinical meaning of FiO2, its valid range, and how it maps to patient severity to justify cleaning and imputation decisions made in Tutorial 2.
+
+**Unconsidered Metrics Report** — Identified three clinically important metrics absent from the dataset: SpO2, blood glucose, and lactate levels and explained how each would enhance triage accuracy.
