@@ -1,14 +1,5 @@
 # CariSurg Portfolio Week 0 
 
-## Repository Structure
-
-```text
-carisurg-portfolio/
-├── notebooks/
-├── docs/
-├── data/
-```
-
 ## Tutorial 1: Data Cleaning (Gender)
 
 ### What was done
