@@ -1,4 +1,4 @@
-# CariSurg Portfolio Week 0 
+# CariSurg MedTech Pathways Portfolio
 
 ## Repository Structure
 
@@ -9,99 +9,20 @@ carisurg-portfolio/
 ├── data/
 ```
 
-## Tutorial 1: Data Cleaning (Gender)
+## Project Overview
 
-### What was done
-I cleaned the Gender column of the hospital triage dataset.
+This repository documents my progress throughout the CariSurg MedTech Pathways programme and the development of an **Explainable AI-Assisted Emergency Department Triage Support System for Resource-Constrained Healthcare Settings**.
 
-### The problem
-The Gender column had 6 inconsistent variants:
-- Male, MALE, 1 (all meaning Male)
-- Female, FEMALE, 0 (all meaning Female)
+The project explores how artificial intelligence can support emergency department triage by improving patient prioritisation while maintaining clinician oversight and decision transparency.
 
-### My solution
-- Changed all values to lowercase
-- Mapped to numeric encoding:
-  - 1 = Male
-  - 0 = Female
-  - 2 = Non-Binary
+## Progress So Far (Weeks 0–2)
 
-### What I learned
-- How to explore dirty data before cleaning it
-- How to use .map() to standardise inconsistent values
-- The importance of documenting encoding decisions
+| Week | Focus | Summary |
+|------|-------|---------|
+| Week 0 | Data Preparation | Prepared and explored emergency department triage data through data cleaning, clinical validation, visualisation, and early triage decision logic development |
+| Week 1 | Literature Review | Conducted a literature review of existing AI-assisted emergency triage approaches and identified gaps related to explainability, validation, and real-world implementation |
+| Week 2 | Proposal Refinement | Expanded the literature review, refined the research proposal, and developed a proposed explainable machine learning solution using interpretable clinical decision support concepts |
 
+## About This Portfolio
 
-## Tutorial 2: Data Cleaning (Fio2)
-
-### What was done
-I cleaned the Fio2 (Fraction of Inspired Oxygen) column from a hospital emergency triage dataset.
-
-### The problem
-| Property | Detail |
-|---|---|
-| Clinical meaning | The percentage of oxygen a patient is breathing |
-| Valid range | 21–100% |
-| Note | 21% = room air (normal). 100% = pure oxygen via ventilator — not an outlier. |
-
-### The solution
-- 22 missing (NaN) values
-- Column needed type verification and range validation
-- Required clinical understanding before any cleaning decision could be made
-
-### My Solution
-1. Inspected with `unique()` and `describe()` — confirmed clean percentages, no string errors
-2. Applied `pd.to_numeric(..., errors='coerce')` for pipeline consistency
-3. Range filter (21–100%) — found 0 out-of-range values
-4. Imputed missing values with median (21.0)
-5. Added a clinical category column to classify patients by oxygen support level
-
-### What I Learned
-- How to anchor cleaning decisions in clinical knowledge, not just statistics
-- The difference between a statistical outlier and a physiologically impossible value
-- How to use `pd.to_numeric(..., errors='coerce')` to handle mixed-type columns
-- How to justify imputation method based on data distribution
-- How to add clinical meaning back to cleaned data through categorisation
-
-## Tutorial 3: Data Visualisation
-### What was done
-I created two clinical visualisations from the hospital triage dataset to explore patterns in patient demographics and haemodynamic status.
-
-### The Plots
-
-**Plot 1 — Patient Age Distribution (Histogram)**
-
-| Property | Detail |
-|---|---|
-| Clinical question | What age groups most frequently present to this ED? |
-| Plot type | Histogram — distribution of one continuous variable |
-| Reference lines | Paediatric threshold (18), Elderly threshold (65+) |
-
-**Plot 2 — Age vs Mean Arterial Pressure (Scatter Plot)**
-
-| Property | Detail |
-|---|---|
-| Clinical question | Does MAP increase with age in the ED? |
-| Plot type | Scatter — relationship between two continuous variables |
-| Reference lines | MAP < 60 (organ perfusion risk), MAP > 100 (hypertensive concern) |
-
-### My Solution
-1. Identified a clinical question before choosing each plot type
-2. Used `ax.hist()` for the age distribution and `ax.scatter()` for the Age vs MAP relationship
-3. Added `axvline()` and `axhline()` reference lines with clinical thresholds labelled
-4. Saved each figure with `plt.savefig()` at 100 dpi
-
-### What I Learned
-- How to frame a plot around a clinical question before writing any code
-- How to choose between a histogram and scatter plot based on variable types
-- How to add clinical reference lines to give statistical plots medical meaning
-- How to annotate and label plots clearly for a clinical audience
-
-
-## Supporting Reports
-
-**At Risk Patient Logic** - Designed a pseudocode triage system that scores patients across seven vital signs (GCS, SBP, MAP, pulse, RR, temperature, FiO2) and assigns urgency levels from "Not urgent" to "Immediate intervention needed". I also outlined other important elements such as age weighting and vital sign trend tracking over the first 30 minutes post arrival.
-
-**Fraction of Inspired Oxygen Report** - Documented clinical meaning of FiO2, its valid range, and how it maps to patient severity to justify cleaning and imputation decisions made in Tutorial 2.
-
-**Unconsidered Metrics Report** - Identified three clinically important metrics absent from the dataset: SpO2, blood glucose, and lactate levels and explained how each would enhance triage accuracy.
+This portfolio demonstrates the integration of data science, healthcare knowledge, and responsible AI design for emergency medicine applications.
