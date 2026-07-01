@@ -14,7 +14,7 @@ This repository documents my progress throughout the CariSurg MedTech Pathways p
 
 The project explores how artificial intelligence can support emergency department triage by improving patient prioritisation while maintaining clinician oversight and decision transparency.
 
-## Progress So Far (Weeks 0–3)
+## Progress So Far (Weeks 0–4)
 
 | Week | Focus | Summary |
 |---|---|---|
@@ -22,6 +22,7 @@ The project explores how artificial intelligence can support emergency departmen
 | Week 1 | Literature Review | Conducted a literature review of existing AI-assisted emergency triage approaches and identified gaps related to explainability, validation, and real-world implementation |
 | Week 2 | Proposal Refinement | Expanded the literature review, refined the research proposal, and developed a proposed explainable machine learning solution using interpretable clinical decision support concepts |
 | Week 3 | Healthcare Workflows & Systems Thinking | Mapped the current ED triage workflow, identified five AI plug-in points, defined three workflow constraints with design responses, named five clinical stakeholders, and expanded the literature review to ten papers |
+| Week 4 | Ethics, Safety & Risk Awareness | Built a five-risk register spanning AI-technical, operational, ethical, and equity domains, wrote a risk memo on the top three priority risks, documented a real-world AI-harm case study with root-cause analysis, and expanded the literature review to fifteen papers |
 
 ## About This Portfolio
 This portfolio demonstrates the integration of data science, healthcare knowledge, and responsible AI design for emergency medicine applications.
