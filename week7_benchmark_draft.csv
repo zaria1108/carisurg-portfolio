@@ -1,0 +1,5 @@
+Model,Accuracy,Precision (macro),Recall (macro),F1 (macro),Train Time (s),Inference (ms/patient),Recall (ESI 1)
+Dummy Baseline,0.37,0.201,0.201,0.201,—,—,0.0
+Logistic Regression,0.683,0.614,0.498,0.533,11.178,0.0035,0.4
+Decision Tree,0.553,0.242,0.249,0.224,0.259,0.0029,0.0
+Random Forest,0.587,0.333,0.267,0.245,4.962,0.101,0.0
