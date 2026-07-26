@@ -7,7 +7,6 @@
 ## 2. Final Model Decision
 - **Model:** Logistic Regression
 - **One-sentence why:** *(To write — condense the Week 7 decision journal's reasoning into a single sentence, e.g. "Chosen because it was the only model benchmarked with non-zero recall on the most critical patient class, while also being the fastest and most explainable option.")*
-- Full reasoning: `docs/decisions/2026-week-7-model-choice.md`
 
 ## 3. How to Run
 ```bash
