@@ -3,8 +3,7 @@
 This table is the audit trail behind the Week 7 model decision. Every model
 trained across Weeks 6 and 7 is listed below, on the same train/test split
 (`random_state=42`, 80/20 stratified on `esi`) so results are directly
-comparable. Full reasoning for the final choice is in the
-[Week 7 decision journal](decisions/2026-week-7-model-choice.md).
+comparable. 
 
 **Status:** Draft — interim submission. Final submission will add any
 additional tuning runs and cross-reference exact commit hashes.
@@ -25,9 +24,6 @@ additional tuning runs and cross-reference exact commit hashes.
 - **Only model with non-zero recall on ESI Level 1** — the single metric prioritised for clinical safety (missing a critical patient is far more dangerous than a false alarm)
 - ~29x faster inference than Random Forest — relevant to Martina Griffith's compute-cost concern
 - Explainable to a clinician in one sentence per prediction (one fixed coefficient per feature per class), unlike Random Forest's averaged, harder-to-explain-per-patient importances
-
-Full reasoning: [`docs/decisions/2026-week-7-model-choice.md`](decisions/2026-week-7-model-choice.md)
-Full cost-benefit analysis: [`docs/Week7_Cost_Benefit_Memo.pdf`](Week7_Cost_Benefit_Memo.pdf)
 
 ## Known gaps in this draft (to close before final submission)
 - [ ] Confirm which of the two logistic-regression accuracy figures (0.657 vs. 0.683) is reproducible from a single clean `Runtime → Restart → Run All`, and update this table with one authoritative number
