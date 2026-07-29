@@ -1,0 +1,26 @@
+# CariSurg ED Triage -- single source of truth for training.
+# One decision, one model, one set of hyperparameters (Week 8 requirement).
+# The model below was selected in Week 7 -- see docs/decisions/2026-week-7-model-choice.md
+
+data:
+  raw_path: "data/yaleemmlc_admissionprediction_triage.csv"
+  esi1_label: 1          # the ESI level treated as "critical" for the headline recall metric
+
+split:
+  test_size: 0.20
+  stratify_on: "esi"
+  random_state: 42       # committed seed -- must match Week 6/7 for comparability
+
+model:
+  # PINNED per Week 7 decision journal: Logistic Regression won on accuracy,
+  # was the only model with non-zero ESI-1 recall, ~29x faster inference than
+  # Random Forest, and is explainable to a clinician in one sentence.
+  name: "logistic_regression"
+  params:
+    max_iter: 1000
+    random_state: 42
+  requires_scaling: true   # logistic regression needs the imputer+scaler pipeline
+
+output:
+  model_path: "models/logistic_regression.joblib"
+  metrics_path: "docs/latest_run_metrics.json"
