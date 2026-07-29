@@ -1,0 +1,16 @@
+# Data — kept separate from the repo per course guidance; see docs/HANDOVER.md
+data/
+*.csv
+
+# Trained model artifacts — regenerate via scripts/train.py, don't commit
+models/
+*.joblib
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# Generated at runtime
+docs/latest_run_metrics.json
