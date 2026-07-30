@@ -3,20 +3,46 @@
 ## Repository Structure
 ```text
 carisurg-portfolio/
+├── README.md                 # Main project README
+├── LICENSE
+├── .gitignore
 ├── config.yaml
 ├── requirements.txt
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── README.md             # Data description
+│
+├── docs/
+│   ├── Week 0/
+│   ├── Week 1/
+│   ├── Week 2/
+│   ├── Week 3/
+│   ├── Week 4/
+│   ├── Week 5/
+│   ├── Week 6/
+│   ├── Week 7/
+│   ├── Week 8/
+│   └── decisions/
+│
+├── notebooks/
+│   ├── Week_6_InterimNotebook.ipynb
+│   ├── week7_model_comparison.ipynb
+│   ├── final_week7_model_comparison.ipynb
+│   └── Week_8_Testing.ipynb
+│
 ├── scripts/
 │   └── train.py
+│
 ├── src/
 │   ├── data.py
 │   ├── features.py
 │   ├── model.py
 │   └── utils.py
-├── tests/
-├── notebooks/
-├── docs/
-│   └── decisions/
-├── data/
+│
+└── tests/
+    └── test_pipeline_sanity.py
 ```
 
 ## Project Overview
